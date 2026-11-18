@@ -1,0 +1,20 @@
+schema: bee/v1
+name: qa_scan_bee                           # canonical: snake_case, fixed forever
+display_name: QA Scan Bee
+version: 1.0.0
+description: NB-41838 - starts an image scan as the bee's own custom-role user.
+author: { name: Nudgebee }
+
+install:
+  account_types: [k8s]                  # which kinds of account it can run on
+  scope: [namespaces]                   # what the admin can narrow it to inside each account
+
+integrations: []
+
+output:                                 # summary, evidence and runs are built in
+  verdict: { enum: [limit_too_low, leak, config_or_code, unsure] }
+
+budget:
+  max_tokens_per_run: 100000
+  max_runs_per_day: 20
+  timeout: 10m
