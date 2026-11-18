@@ -1,8 +1,8 @@
 schema: bee/v1
 name: qa_test_bee                           # canonical: snake_case, fixed forever
 display_name: QA Test Bee
-version: 2.1.0
-description: NB-41915 - v2.1.0 asks for more access (ArgoCD read) - recheck of the approval step.
+version: 2.2.0
+description: NB-41915 - v2.2.0 asks for more access (ArgoCD tool) - recheck of the approval step.
 author: { name: Nudgebee }
 
 install:

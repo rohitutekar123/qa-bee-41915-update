@@ -13,6 +13,7 @@ tools:                                  # built-in tools, used to read; each mus
   - kg_search_nodes
   - resource_search_execute
   - github_execute
+  - argocd_execute
 skills: [memory-sizing]
 # Read or write per integration is in .bee/bee.yaml (integrations[].access). The agent changes
 # things only through its automations.
