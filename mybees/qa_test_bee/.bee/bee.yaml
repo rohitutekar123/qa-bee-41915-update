@@ -1,8 +1,8 @@
 schema: bee/v1
 name: qa_test_bee                           # canonical: snake_case, fixed forever
 display_name: QA Test Bee
-version: 1.9.0
-description: NB-41915 - v1.9.0 plain update, no new access (for the read-only user check).
+version: 2.0.0
+description: NB-41915 - v2.0.0 asks for more access (Loki write) - recheck of the approval step.
 author: { name: Nudgebee }
 
 install:
@@ -29,9 +29,9 @@ integrations:
     why: NB-41915 test - asks for more access than v1.3.0.
   - id: logs
     types: [loki]
-    access: read
+    access: write
     required: false
-    why: NB-41915 test - v1.6.0 asks for more access than v1.5.0.
+    why: NB-41915 test - v2.0.0 asks for more access than v1.9.0.
 
 settings:
   max_limit_increase_pct:
