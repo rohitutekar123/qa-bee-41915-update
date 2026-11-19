@@ -1,0 +1,3 @@
+triggers:
+  - type: schedule
+    params: { cron: "0 6 * * *" }
