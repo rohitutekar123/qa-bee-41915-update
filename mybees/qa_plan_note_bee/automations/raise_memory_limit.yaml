@@ -2,7 +2,7 @@
 # platform computes the tier from the steps. The rest is today's automation template format.
 # Tier: unrestricted (cloud.k8s.cli): asks first everywhere unless the admin sets otherwise.
 summary: Set a new memory request and limit on one container.
-slug: qa_test_bee__raise_memory_limit
+slug: qa_plan_note_bee__raise_memory_limit
 name: "Raise a container memory limit"
 description: "Sets a new memory request and limit on one container and waits for the rollout."
 version: 1.0.0

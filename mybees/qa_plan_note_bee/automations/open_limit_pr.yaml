@@ -5,7 +5,7 @@
 # script commits the agent's edited manifest to a new branch and opens a pull request.
 # It never merges.
 summary: Open a pull request that changes a memory limit in the workload's manifest.
-slug: qa_test_bee__open_limit_pr
+slug: qa_plan_note_bee__open_limit_pr
 name: "Open a pull request that changes a memory limit"
 description: "Commits the edited manifest file to a new branch and opens a pull request. Never merges."
 version: 1.0.0
@@ -43,9 +43,9 @@ definition:
           git checkout -q -b "$BRANCH"
           dec '{{ Inputs.content | b64encode }}' > "$FILE"
           [ -n "$(git status --porcelain)" ] || { echo "the new content is the same as the file"; exit 1; }
-          git -c user.name="QA Test Bee" -c user.email="qa_test_bee@bees.invalid" commit -q -am "Change memory for $WORKLOAD"
+          git -c user.name="QA Plan Note Bee" -c user.email="qa_plan_note_bee@bees.invalid" commit -q -am "Change memory for $WORKLOAD"
           git push -q origin "$BRANCH"
-          BODY="Opened by QA Test Bee.
+          BODY="Opened by QA Plan Note Bee.
 
           $WHY"
           gh pr create --repo "$REPO" --head "$BRANCH" --title "Change memory for $WORKLOAD" --body "$BODY"
