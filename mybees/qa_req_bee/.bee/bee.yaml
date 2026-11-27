@@ -1,8 +1,8 @@
 schema: bee/v1
 name: qa_req_bee                           # canonical: snake_case, fixed forever
 display_name: QA Required Bee
-version: 1.0.0
-description: NB-41915 - needs a Loki integration (required) to test adding an account.
+version: 1.1.0
+description: NB-41915 prod QA - probe which integrations each account has.
 author: { name: Nudgebee }
 
 install:
@@ -22,11 +22,11 @@ integrations:
     access: write
     required: false
     why: Files a ticket for the owning team when the cause is a leak.
-  - id: logs
-    types: [loki]
+  - id: probe
+    types: [loki, prometheus, elasticsearch, opensearch, datadog, newrelic, grafana, victoriametrics, signoz, coralogix, splunk, jira, slack, teams, pagerduty, opsgenie, zenduty, servicenow, argocd, gitlab, sentry, clickhouse]
     access: read
-    required: true
-    why: NB-41915 test - an account without Loki must be refused.
+    required: false
+    why: NB-41915 prod QA probe.
 
 settings:
   max_limit_increase_pct:
