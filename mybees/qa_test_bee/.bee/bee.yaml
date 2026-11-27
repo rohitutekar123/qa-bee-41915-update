@@ -1,8 +1,8 @@
 schema: bee/v1
 name: qa_test_bee                           # canonical: snake_case, fixed forever
 display_name: QA Test Bee
-version: 2.6.0
-description: NB-41915 prod QA - v2.6.0 asks for more access (brings back the GitHub PR automation).
+version: 2.7.0
+description: NB-41915 prod QA - v2.7.0 requires ServiceNow.
 author: { name: Nudgebee }
 
 install:
@@ -12,6 +12,11 @@ install:
   # and namespaces (patterns, default all including future ones) on the install screen.
 
 integrations:
+  - id: itsm
+    types: [servicenow]
+    access: read
+    required: true
+    why: NB-41915 test - an update needing a missing integration must be refused.
   - id: repos
     types: [github]
     access: read                       # read, or write: what install grants on this integration
