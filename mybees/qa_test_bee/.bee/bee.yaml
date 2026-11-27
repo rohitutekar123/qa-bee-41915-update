@@ -1,8 +1,8 @@
 schema: bee/v1
 name: qa_test_bee                           # canonical: snake_case, fixed forever
 display_name: QA Test Bee
-version: 2.3.0
-description: NB-41915 prod QA - v2.3.0 base version (GitHub read only).
+version: 2.4.0
+description: NB-41915 prod QA - v2.4.0 plain update, no new access.
 author: { name: Nudgebee }
 
 install:
