@@ -1,7 +1,0 @@
-triggers:
-  - type: event
-    params:
-      event_type: [qa_scan_bee_never_fires]
-      on: event.created
-    dedupe: "{{ event.cluster }}/{{ event.subject_namespace }}/{{ event.subject_owner }}"
-    window: 6h

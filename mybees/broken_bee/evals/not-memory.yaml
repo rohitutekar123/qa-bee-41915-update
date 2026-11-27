@@ -1,5 +1,0 @@
-name: Crash loop with memory well below the limit
-trigger: fixtures/crash-loop-config-error.json
-expect:
-  verdict: config_or_code
-  runs: []
