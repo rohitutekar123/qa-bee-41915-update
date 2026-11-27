@@ -1,8 +1,8 @@
 schema: bee/v1
 name: qa_test_bee                           # canonical: snake_case, fixed forever
 display_name: QA Test Bee
-version: 2.5.0
-description: NB-41915 prod QA - v2.5.0 asks for more access (GitHub write).
+version: 2.5.1
+description: NB-41915 prod QA - v2.5.1 drops the GitHub PR automation (less access).
 author: { name: Nudgebee }
 
 install:
@@ -14,7 +14,7 @@ install:
 integrations:
   - id: repos
     types: [github]
-    access: write                       # read, or write: what install grants on this integration
+    access: read                       # read, or write: what install grants on this integration
     required: false
     why: Opens a pull request that changes the memory limit in your manifests.
   - id: tickets
