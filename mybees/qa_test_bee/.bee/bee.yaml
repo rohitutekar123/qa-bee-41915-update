@@ -1,8 +1,8 @@
 schema: bee/v1
 name: qa_test_bee                           # canonical: snake_case, fixed forever
 display_name: QA Test Bee
-version: 2.2.0
-description: NB-41915 - v2.2.0 asks for more access (ArgoCD tool) - recheck of the approval step.
+version: 2.3.0
+description: NB-41915 prod QA - v2.3.0 base version (GitHub read only).
 author: { name: Nudgebee }
 
 install:
@@ -14,7 +14,7 @@ install:
 integrations:
   - id: repos
     types: [github]
-    access: write                       # read, or write: what install grants on this integration
+    access: read                       # read, or write: what install grants on this integration
     required: false
     why: Opens a pull request that changes the memory limit in your manifests.
   - id: tickets
